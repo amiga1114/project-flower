@@ -1,0 +1,57 @@
+<div id="footer-wrapper">
+	<div id="footer" class="container">
+		<header class="major">
+			<h2>당신의 소중한 의견을 들려주세요.</h2>
+			<p>문의사항이나 구매후기를 남겨주세요.<br >
+			상품후기를 남기신 분들에게는 추첨 후 소정의 상품을 선물해 드립니다.</p>
+		</header>
+		<div class="row">
+		  <%= form_for(@post, :html => { :style => 'width: 100%;' }) do |f| %>
+        <% if @post.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <section class="6u 12u(narrower)">
+          <form method="post" action="#">
+      				<div class="field" style="width: 100%">
+      					<div class="6u 12u(mobile)">
+      					  <%= f.label :title %><br>
+                  <%= f.text_field :title, placeholder: "제목을 써주세요." %>
+      					</div>
+      			  </div>
+      				<div class="field" style="width: 100%">
+      					<div class="6u 12u(mobile)">
+                  <%= f.label :content %><br>
+                  <%= f.text_area :content, placeholder: "내용을 써주세요." %>
+                </div>
+      				</div>
+      			</div>
+        		<div class="row 50%">
+        			<div class="12u">
+        				<ul class="actions">
+        					<%= f.submit %>
+        					<!--<%= button_to 'Back', posts_path, style: "float: right;" %>-->
+        				</ul>
+        			</div>
+        		</div>
+        	</form>
+  			</section>
+			<% end %>
+		</div>
+	</div>
+</div>
+				
+			<!-- Scripts -->
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.dropotron.min.js"></script>
+<script src="../../assets/js/skel.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="../../assets/js/main.js"></script>

@@ -1,0 +1,37 @@
+<!-- Main -->
+<div class="wrapper">
+	<div class="container" id="main">
+
+    <!-- Content -->
+  	<article id="content">
+  		<header>
+  			<p>
+          <!--<strong>Title:</strong>-->
+          <%= @post.title %>
+        </p>
+  		</header>
+  		<!--<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>-->
+    		<p>
+          <!--<strong>Content:</strong>-->
+          <%= @post.content %>
+        </p>
+  	</article>
+
+    <div class="row 50%">
+      <div class="12u">
+        <ul class="actions">
+          <%= button_to 'Edit', edit_post_path(@post), style: "float: left;", method: :get %>
+          <!--<%= button_to 'Back', posts_path, style: "float: right;" %>-->
+    		</ul>
+      </div> 
+    </div>
+  </div> 
+</div>
+			<!-- Scripts -->
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.dropotron.min.js"></script>
+<script src="../../assets/js/skel.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="../../assets/js/main.js"></script>
