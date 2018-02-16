@@ -27,6 +27,15 @@
       			  </div>
       				<div class="field" style="width: 100%">
       					<div class="6u 12u(mobile)">
+      					  <%= f.label :flowertype %><br>
+                  <%= f.radio_button :flowertype, "bouquet", :check => true %> 꽃다발
+                  <%= f.radio_button :flowertype, "flowerbasket" %> 꽃바구니
+                  <%= f.radio_button :flowertype, "flowerpot" %> 화분
+                  <%= f.radio_button :flowertype, "floweretc" %> 기타
+      					</div>
+      			  </div>
+      				<div class="field" style="width: 100%">
+      					<div class="6u 12u(mobile)">
                   <%= f.label :content %><br>
                   <%= f.text_area :content, placeholder: "내용을 써주세요." %>
                 </div>

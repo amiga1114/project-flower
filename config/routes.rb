@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    collection do 
+      get :bouquet
+      get :flowerbasket
+      get :flowerpot
+      get :floweretc
+    end
+  end
   devise_for :users
   root to: "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
