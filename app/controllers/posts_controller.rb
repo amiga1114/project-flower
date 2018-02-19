@@ -6,7 +6,26 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-
+  
+  # 꽃다발 페이지
+  def bouquet
+    @posts = Post.all
+  end
+  
+  # 꽃바구니 페이지
+  def flowerbasket
+    @posts = Post.all
+  end
+  
+  # 화분 페이지
+  def flowerpot
+    @posts = Post.all
+  end
+  
+  # 기타 페이지
+  def floweretc
+    @posts = Post.all
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -25,8 +44,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    find = Post.last(post_params)
-    puts find
+    # find = Post.last(post_params)
+    # puts find
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -70,6 +89,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :flowertype)
     end
 end
